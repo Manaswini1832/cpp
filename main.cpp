@@ -1,16 +1,36 @@
 #include <iostream>
-//#include <cmath>
 
 using namespace std;
 
 int main()
 {
-    string name;
+    int num1;
+    int num2;
+    char operation;
 
-    cout << "Enter your age : ";
-    getline(cin, name);
+    cout << "Enter first number" <<endl;
+    cin >> num1;
 
-    cout << "You are " << name << endl;
+    cout << "Enter second number" <<endl;
+    cin >> num2;
+
+    cout << "Enter the required operation : + for addition, - for subtraction, * for multiplication and / for division" << endl;
+    cin >> operation;
+
+    switch (operation) {
+      case '+':
+        cout << num1 + num2;
+        break;
+      case '-':
+        cout << num1 - num2;
+        break;
+      case '*':
+        cout << num1 * num2;
+        break;
+      case '/':
+        cout << num1 / num2;
+        break;
+    }
 
     return 0;
 }
