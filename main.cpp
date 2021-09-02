@@ -2,45 +2,27 @@
 
 using namespace std;
 
-string getDay(int num){
-    string day;
-    switch(num){
-    case 1 :
-        day = "Sunday";
-        break;
-    case 2 :
-        day = "Monday";
-        break;
-    case 3 :
-        day = "Tuesday";
-        break;
-    case 4 :
-        day = "Wednesday";
-        break;
-    case 5 :
-        day = "Thursday";
-        break;
-    case 6 :
-        day = "Friday";
-        break;
-    case 7 :
-        day = "Saturday";
-        break;
-    default :
-        day = "Invalid number entered";
-        break;
-    }
-
-    return day;
-}
-
 int main()
 {
-    int num;
-    cout << "Enter a number corresponding to a weekday" << endl;
-    cin >> num;
-    string result = getDay(num);
-    cout << result << endl;
+    int index = 6;
+
+    //Checks condition and only then executes the code
+    //Won't print 6 to the console
+    while(index <= 5){
+        cout << "This is the while loop" << endl;
+        cout << index << endl;
+        index ++;
+    }
+
+    index = 6;
+
+    //Executes code and checks for conditions
+    //So it will print out 6 to the console
+    do{
+       cout << "This is the do while loop" << endl;
+       cout << index << endl;
+       index++;
+    }while(index <= 5);
 
     return 0;
 }
