@@ -2,16 +2,24 @@
 
 using namespace std;
 
+//Could do the following or we could instead also define the function on top of the main() function block itself
+
+//Function stub
+void sayHi(string name);
+
 int main()
 {
-    //Arrays in C++ are declared as shown below
-    int numsArr[5] = {0,1,2,3,4};
+    string name;
+    cout << "Enter your name : " << endl;
+    getline(cin, name);
 
-    //C++ also supports arrays with a dynamic number of elements
-    int numsArr2[] = {0, 5, 6};
-
-    //Array elements can be accessed by indexing them. Indexing starts with 0
-    cout << numsArr2[2];
+    // Function call
+    sayHi(name);
 
     return 0;
+}
+
+//Function definition
+void sayHi(string name){
+    cout << "Hey " << name << endl;
 }
