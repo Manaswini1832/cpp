@@ -4,33 +4,21 @@ using namespace std;
 
 int main()
 {
-    int num1;
-    int num2;
-    char operation;
+    string color;
+    cout << "Type in a color : " << endl;
+    getline(cin, color);
 
-    cout << "Enter first number" <<endl;
-    cin >> num1;
+    string pluralNoun;
+    cout << "Type in a plural noun : " << endl;
+    getline(cin, pluralNoun);
 
-    cout << "Enter second number" <<endl;
-    cin >> num2;
+    string celebrity;
+    cout << "Enter the name of your favorite celebrity" << endl;
+    getline(cin, celebrity);
 
-    cout << "Enter the required operation : + for addition, - for subtraction, * for multiplication and / for division" << endl;
-    cin >> operation;
-
-    switch (operation) {
-      case '+':
-        cout << num1 + num2;
-        break;
-      case '-':
-        cout << num1 - num2;
-        break;
-      case '*':
-        cout << num1 * num2;
-        break;
-      case '/':
-        cout << num1 / num2;
-        break;
-    }
+    cout << "Roses are " << color << endl;
+    cout << pluralNoun << " are blue" << endl;
+    cout << "I love " << celebrity << endl;
 
     return 0;
 }
