@@ -4,21 +4,14 @@ using namespace std;
 
 int main()
 {
-    string color;
-    cout << "Type in a color : " << endl;
-    getline(cin, color);
+    //Arrays in C++ are declared as shown below
+    int numsArr[5] = {0,1,2,3,4};
 
-    string pluralNoun;
-    cout << "Type in a plural noun : " << endl;
-    getline(cin, pluralNoun);
+    //C++ also supports arrays with a dynamic number of elements
+    int numsArr2[] = {0, 5, 6};
 
-    string celebrity;
-    cout << "Enter the name of your favorite celebrity" << endl;
-    getline(cin, celebrity);
-
-    cout << "Roses are " << color << endl;
-    cout << pluralNoun << " are blue" << endl;
-    cout << "I love " << celebrity << endl;
+    //Array elements can be accessed by indexing them. Indexing starts with 0
+    cout << numsArr2[2];
 
     return 0;
 }
