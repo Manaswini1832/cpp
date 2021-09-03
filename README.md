@@ -17,8 +17,8 @@ Followed [this](https://www.youtube.com/watch?v=vLnPwxZdW4Y) video
   \*(myArray + 1) -> This will give the second element of myArray 
 
 - Can use printf and scanf in C++
-- 
-    `int a;
+
+    int a;
     
     long b;
     
@@ -39,4 +39,4 @@ Followed [this](https://www.youtube.com/watch?v=vLnPwxZdW4Y) video
     printf("%f\n", d);
     
     printf("%lf\n", e);
-    `
+    
