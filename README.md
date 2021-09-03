@@ -4,6 +4,8 @@ Followed [this](https://www.youtube.com/watch?v=vLnPwxZdW4Y) video
 
 ## New things I'm picking up after the video
 
+- If getline() used after cin(for a multi line input) should work correctly, we need to use cin >> ws; after the cin line
+
 - Name of the array is a pointer to the first element in the array
 
   cout << myArray; -> Will print the address of the first element of myArray
