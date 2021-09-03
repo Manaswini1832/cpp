@@ -15,3 +15,28 @@ Followed [this](https://www.youtube.com/watch?v=vLnPwxZdW4Y) video
   \*myArray + 1  -> This will add 1 to the first element of myArray
   
   \*(myArray + 1) -> This will give the second element of myArray 
+
+- Can use printf and scanf in C++
+- 
+    `int a;
+    
+    long b;
+    
+    char c;
+    
+    float d;
+    
+    double e;
+    
+    scanf("%d %ld %c %f %lf", &a, &b, &c, &d, &e);
+    
+    printf("%d\n", a);
+    
+    printf("%ld\n", b);
+    
+    printf("%c\n", c);
+    
+    printf("%f\n", d);
+    
+    printf("%lf\n", e);
+    `
