@@ -2,25 +2,25 @@
 
 using namespace std;
 
+// Template that defines the data type we want to create
+// Called as a class
+class Book{
+    public :
+        string title;
+        string author;
+        string publisher;
+};
+
 int main()
 {
-    int age = 19;
-    int *pAge = &age;
+    // Following is an instance of that "Book" class
+    // This instance is called an object
+    Book book1;
 
-    // Pointer data type should be the same as the data type of the variable it points to
-    string name = "Some name";
-    string *pName = &name;
+    book1.title =  "Anne of Green gables";
+    book1.author = "L.M.Montgomery";
+    book1.publisher = "Bantam books";
 
-    // Prints out the memory address at which the age variable is being stored
-    cout << &age << endl;
-
-    // Prints out the memory address at which the age variable is being stored
-    cout << pAge << endl;
-
-    // Prints out the value being pointed to, by the address stored inside the pointer
-    // This is called as dereferencing a pointer
-    // Prints out 19
-    cout << *pAge << endl;
-
+    cout << book1.title << endl;
     return 0;
 }
