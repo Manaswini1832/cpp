@@ -1,34 +1,29 @@
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
-// Using class inheritance we can also override certain functions from the parent class
-
-class Chef{
-    public :
-        void makeSalad(){
-            cout << "Chef is making salad" << endl;
-        }
-};
-
-class ItalianChef : public Chef{
-    public :
-        void makePasta(){
-            cout << "Chef is making pasta" << endl;
-        }
-        void makeSalad(){
-            cout << "Chef is making Italian salad" << endl;
-        }
-};
+// Vectors and iterators in C++
 
 int main()
 {
-    Chef chef1;
-    chef1.makeSalad(); // Chef is making salad
+    vector<int> v;
+    // push_back is to append elements to a vector
+    // pop_back(); removes and element from the end of the vector
+    v.push_back(1);
+    v.push_back(2);
+    v.push_back(3);
 
-    ItalianChef itChef;
-    itChef.makeSalad(); // Chef is making Italian salad
-    itChef.makePasta(); // Chef is making pasta
+    for(int i = 0; i < v.size(); i++){
+        cout << v[i] << endl;
+    }
+
+    // Above for loop can easily be executed using an iterator shown below
+    vector<int>::iterator iter;
+
+    for(iter = v.begin(); iter != v.end(); iter++){
+        cout << *iter << endl;
+    }
 
     return 0;
 }
