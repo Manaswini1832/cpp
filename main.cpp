@@ -1,28 +1,32 @@
 #include <iostream>
 #include <vector>
+#include <sstream>
 
 using namespace std;
 
-// Vectors and iterators in C++
+// Multi line string inputs convert to integer and print the numbers in the second line in reverse order
 
 int main()
 {
-    vector<int> v;
-    // push_back is to append elements to a vector
-    // pop_back(); removes and element from the end of the vector
-    v.push_back(1);
-    v.push_back(2);
-    v.push_back(3);
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    string strSize, strMulti;
+    int size;
+    vector<int> nums;
 
-    for(int i = 0; i < v.size(); i++){
-        cout << v[i] << endl;
-    }
+    // Get array size from STDIN
+    getline(cin, strSize);
+    size = stoi(strSize);
 
-    // Above for loop can easily be executed using an iterator shown below
-    vector<int>::iterator iter;
+    // Get array elements from STDIN
 
-    for(iter = v.begin(); iter != v.end(); iter++){
-        cout << *iter << endl;
+    // Following four lines of code read integers separated by whitespaces and convert them to an integer and push them to the nums vector
+    getline(cin, strMulti);
+    istringstream is(strMulti);
+    int num;
+    while(is >> num) nums.push_back(num);
+
+    for(int index = size - 1; index >= 0; index--){
+        cout << nums[index] << " ";
     }
 
     return 0;
