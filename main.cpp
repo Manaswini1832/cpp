@@ -2,51 +2,31 @@
 
 using namespace std;
 
-// Aim or the motivation behind using getters and setters
-// Say we want the rating to be restricted to an int between 0 and 5 and we want to set the rating to 0 if not rated
-// We can do that by setting the rating variable inside the Book class to be private
-// Now that we can't access this private variable outside the class, to get it or to set it to another value we need to create functions
-// The getter function is getRating()
-// The setter function is setRating()
+// Class inheritance can be used to extend the functionality of classes
+// In the following example, the Italian chef has all the abilities as the normal chef but in addition to it the Italian chef can also make pasta
 
-class Book{
-    private :
-        int rating;
+class Chef{
     public :
-        string title;
-        string author;
-        string publisher;
+        void makeSalad(){
+            cout << "Chef is making salad" << endl;
+        }
+};
 
-    // Constructor function
-    Book(string aTitle, string aAuthor, string aPublisher, int aRating){
-        title = aTitle;
-        author = aAuthor;
-        publisher = aPublisher;
-
-        // Whenever rating is entered as a parameter to the object, the setRating function needs to be called
-        setRating(aRating);
-    }
-
-    // Setter function : setRating()
-    void setRating(int userEnteredRating){
-            if(userEnteredRating < 0 || userEnteredRating > 5){
-                rating = 0;
-            }else{
-                rating = userEnteredRating;
-            }
-    }
-
-    // Getter function : getRating()
-    int getRating(){
-        return rating;
-    }
-
+class ItalianChef : public Chef{
+    public :
+        void makePasta(){
+            cout << "Chef is making pasta" << endl;
+        }
 };
 
 int main()
 {
-    Book book1("Anne of Green gables", "L.M.Montgomery", "Bantam books", 4);
-    book1.setRating(5);
-    cout << book1.getRating() << endl;
+    Chef chef1;
+    chef1.makeSalad();
+
+    ItalianChef itChef;
+    itChef.makeSalad();
+    itChef.makePasta();
+
     return 0;
 }
