@@ -2,37 +2,37 @@
 
 using namespace std;
 
-// Template that defines the data type we want to create
-// Called as a class
 class Book{
     public :
         string title;
         string author;
         string publisher;
+        int rating;
 
-    // This is a constructor function
-    // It makes it easier to create objects by just passing parameters to the instance
-    Book(string aTitle, string aAuthor, string aPublisher){
+    // Constructor function
+    Book(string aTitle, string aAuthor, string aPublisher, int aRating){
         title = aTitle;
         author = aAuthor;
         publisher = aPublisher;
+        rating = aRating;
     }
 
-    // We could create multiple constructor functions as well
-    // For example, we can create a constructor function like the following to fill in default values if no parameters are passed to the instance
-    Book(){
-        title = "No title";
-        author = "No author";
-        publisher = "No publisher";
+    // Object functions or also called instance functions
+    bool isFavorite(){
+            if(rating == 5){
+                return true;
+            }
+            return false;
     }
+
 };
 
 int main()
 {
-    Book book1("Anne of Green gables", "L.M.Montgomery", "Bantam books");
-    Book book2;
+    Book book1("Anne of Green gables", "L.M.Montgomery", "Bantam books", 5);
+    Book book2("Anne of Windy poplars", "L.M.Montgomery", "Bantam books", 4.5);
 
-    cout << book1.title << endl; // Anne of Green gables
-    cout << book2.author << endl; // No author
+    cout << book1.isFavorite() << endl; // Anne of Green gables
+    cout << book2.isFavorite() << endl; // No author
     return 0;
 }
