@@ -2,8 +2,7 @@
 
 using namespace std;
 
-// Class inheritance can be used to extend the functionality of classes
-// In the following example, the Italian chef has all the abilities as the normal chef but in addition to it the Italian chef can also make pasta
+// Using class inheritance we can also override certain functions from the parent class
 
 class Chef{
     public :
@@ -17,16 +16,19 @@ class ItalianChef : public Chef{
         void makePasta(){
             cout << "Chef is making pasta" << endl;
         }
+        void makeSalad(){
+            cout << "Chef is making Italian salad" << endl;
+        }
 };
 
 int main()
 {
     Chef chef1;
-    chef1.makeSalad();
+    chef1.makeSalad(); // Chef is making salad
 
     ItalianChef itChef;
-    itChef.makeSalad();
-    itChef.makePasta();
+    itChef.makeSalad(); // Chef is making Italian salad
+    itChef.makePasta(); // Chef is making pasta
 
     return 0;
 }
